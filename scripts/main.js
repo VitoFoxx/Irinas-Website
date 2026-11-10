@@ -80,8 +80,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const update = () => {
       track.style.transform = `translateX(-${index * 100}%)`;
       dots.forEach((dot, i) => {
-        dot.classList.toggle('bg-gold', i === index);
-        dot.classList.toggle('bg-line/60', i !== index);
+        dot.classList.toggle('bg-taupe-deep', i === index);
+        dot.classList.toggle('bg-taupe/50', i !== index);
       });
     };
     prevBtn?.addEventListener('click', () => {

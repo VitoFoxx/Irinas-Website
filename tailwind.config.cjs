@@ -1,18 +1,16 @@
 /** Build-time config for the static Tailwind CSS bundle (styles/tailwind.css). */
 module.exports = {
-  content: ['./*.html', './perfect-line/*.html', './bridal-looks/*.html'],
+  content: ['./*.html', './perfect-line/*.html', './bridal-looks/*.html', './scripts/*.js'],
   theme: {
     extend: {
       colors: {
-        ivory: '#F7F3EC',
-        sand: '#EFE6D8',
-        'sand-dark': '#E3D5C0',
-        espresso: '#2B2420',
-        'espresso-soft': '#5C5148',
-        gold: '#B08D57',
-        'gold-light': '#D9C6A5',
-        blush: '#D8B4A0',
-        line: '#C9BBA8',
+        ivory: '#F7F3ED',
+        champagne: '#E8DCCE',
+        taupe: '#B9A99A',
+        // Taupe itself is too light for text (2.1:1 on ivory); this deeper shade passes WCAG AA.
+        'taupe-deep': '#776859',
+        espresso: '#35302D',
+        'espresso-soft': '#5F5752',
       },
       fontFamily: {
         display: ['"Playfair Display"', 'serif'],
