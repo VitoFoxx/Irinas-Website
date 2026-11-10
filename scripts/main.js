@@ -22,20 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* Contact form: the wedding date field only applies to Bridal Looks services */
-  const interestSelect = document.querySelector('[data-interest-select]');
-  const weddingRow = document.querySelector('[data-wedding-date]');
-  if (interestSelect && weddingRow) {
-    const weddingInput = weddingRow.querySelector('input');
-    const syncWeddingDate = () => {
-      const isBridal = Boolean(interestSelect.selectedOptions[0]?.closest('optgroup[data-bridal]'));
-      weddingRow.hidden = !isBridal;
-      weddingInput.disabled = !isBridal;
-    };
-    interestSelect.addEventListener('change', syncWeddingDate);
-    syncWeddingDate();
-  }
-
   /* Mobile navigation toggle */
   const navToggle = document.querySelector('[data-nav-toggle]');
   const navPanel = document.querySelector('[data-nav-panel]');
