@@ -15,8 +15,9 @@ module.exports = {
         line: '#C9BBA8',
       },
       fontFamily: {
-        display: ['"Fraunces"', 'serif'],
-        body: ['"Manrope"', 'sans-serif'],
+        display: ['"Playfair Display"', 'serif'],
+        accent: ['"Cormorant Garamond"', 'serif'],
+        body: ['"Montserrat"', 'sans-serif'],
       },
       letterSpacing: {
         widest2: '.28em',

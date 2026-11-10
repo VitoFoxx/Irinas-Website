@@ -1,10 +1,15 @@
 # Schriften
 
-**Fraunces** (Display/Headlines) und **Manrope** (Fließtext/UI) sind hier als selbst gehostete `.woff2`-Dateien (Latin-Subset) abgelegt und werden über `styles/fonts.css` per `@font-face` eingebunden — keine Anfrage an Google zur Laufzeit nötig.
+Alle Schriften sind hier als selbst gehostete `.woff2`-Dateien (Latin-Subset) abgelegt und werden über `styles/fonts.css` per `@font-face` eingebunden — keine Anfrage an Google zur Laufzeit nötig.
 
-Beide Schriften stehen unter der SIL Open Font License (kostenlos, auch kommerziell nutzbar):
+- **Playfair Display** (400/500/600) — große, elegante Überschriften (`font-display`)
+- **Cormorant Garamond Italic** (400/500/600) — romantische Akzente und emotionale Subheadlines (`font-accent`)
+- **Montserrat** (400/500/600/700) — Fließtext, Fragen, Buttons und kleine Beschriftungen (`font-body`, Standard)
 
-- Fraunces: https://fonts.google.com/specimen/Fraunces
-- Manrope: https://fonts.google.com/specimen/Manrope
+Alle drei stehen unter der SIL Open Font License (kostenlos, auch kommerziell nutzbar):
 
-Weitere Sprachsubsets (z. B. Kyrillisch) können bei Bedarf über dieselbe Quelle nachgeladen werden.
+- Playfair Display: https://fonts.google.com/specimen/Playfair+Display
+- Cormorant Garamond: https://fonts.google.com/specimen/Cormorant+Garamond
+- Montserrat: https://fonts.google.com/specimen/Montserrat
+
+Bezogen über Fontsource (npm-Pakete `@fontsource/playfair-display`, `@fontsource/cormorant-garamond`, `@fontsource/montserrat`, Version 5.3.0).
