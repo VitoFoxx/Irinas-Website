@@ -1,6 +1,6 @@
 # Perfect Line & Bridal Looks by Irina — Website
 
-Website von Irina Baumgärtner in Sarstedt (zwischen Hildesheim und Hannover) mit zwei Leistungsbereichen: **Perfect Line by Irina** (Permanent Make-up, Lashlift, Browlift) und **Bridal Looks by Irina** (Braut-Styling).
+Website von Irina Baumgärtner in Sarstedt (zwischen Hildesheim und Hannover) mit zwei Leistungsbereichen: **Perfect Line by Irina** (Permanent Make-up, Lash Lift, Brow Lift) und **Bridal Looks by Irina** (Braut-Styling).
 
 ## Struktur
 
