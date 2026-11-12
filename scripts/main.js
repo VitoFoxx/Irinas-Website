@@ -22,6 +22,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  /* Image galleries (e.g. hairstyle catalog): clicking a small image swaps it with the large one */
+  document.querySelectorAll('[data-gallery]').forEach((gallery) => {
+    const main = gallery.querySelector('[data-main]');
+    if (!main) return;
+    gallery.querySelectorAll('[data-thumb]').forEach((thumb) => {
+      thumb.addEventListener('click', () => {
+        const a = main.innerHTML;
+        main.innerHTML = thumb.innerHTML;
+        thumb.innerHTML = a;
+      });
+    });
+  });
+
   /* Mobile navigation toggle */
   const navToggle = document.querySelector('[data-nav-toggle]');
   const navPanel = document.querySelector('[data-nav-panel]');
