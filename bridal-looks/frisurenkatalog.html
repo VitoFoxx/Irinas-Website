@@ -72,43 +72,63 @@
       <p>Das Paket gibt es exklusiv im Studio und ist ideal fürs Standesamt.</p>
       <p>Der Termin dauert etwa 2,5 Stunden. Je nach Haut und Haarstruktur kann es etwas variieren.</p>
     </div>
+    <nav class="mt-8 flex flex-wrap gap-3" aria-label="Frisuren im Katalog">
+      <a href="#frisur-1" class="text-sm border border-taupe/60 px-4 py-2 hover:border-espresso transition-colors">Frisur 1</a>
+      <a href="#frisur-2" class="text-sm border border-taupe/60 px-4 py-2 hover:border-espresso transition-colors">Frisur 2</a>
+      <a href="#frisur-3" class="text-sm border border-taupe/60 px-4 py-2 hover:border-espresso transition-colors">Frisur 3</a>
+      <a href="#frisur-4" class="text-sm border border-taupe/60 px-4 py-2 hover:border-espresso transition-colors">Frisur 4</a>
+    </nav>
   </section>
 
-  <section class="border-t border-taupe/50 bg-champagne/50" aria-label="Frisuren im Katalog">
+  <section id="frisur-1" class="border-t border-taupe/50 bg-champagne/50 scroll-mt-24" aria-labelledby="frisur-1-titel" data-draft>
     <div class="max-w-content mx-auto px-6 md:px-10 py-16 md:py-24">
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-10 md:gap-x-6">
-        <figure class="reveal" data-draft>
-          <div class="aspect-[4/5] bg-champagne/70 border border-taupe/40 flex items-center justify-center text-sm text-espresso-soft">Bild folgt</div>
-          <figcaption class="mt-3"><span class="font-display text-lg">Frisur 1</span><span class="block text-sm text-espresso-soft">Kurze Beschreibung folgt</span></figcaption>
-        </figure>
-        <figure class="reveal" data-draft>
-          <div class="aspect-[4/5] bg-champagne/70 border border-taupe/40 flex items-center justify-center text-sm text-espresso-soft">Bild folgt</div>
-          <figcaption class="mt-3"><span class="font-display text-lg">Frisur 2</span><span class="block text-sm text-espresso-soft">Kurze Beschreibung folgt</span></figcaption>
-        </figure>
-        <figure class="reveal" data-draft>
-          <div class="aspect-[4/5] bg-champagne/70 border border-taupe/40 flex items-center justify-center text-sm text-espresso-soft">Bild folgt</div>
-          <figcaption class="mt-3"><span class="font-display text-lg">Frisur 3</span><span class="block text-sm text-espresso-soft">Kurze Beschreibung folgt</span></figcaption>
-        </figure>
-        <figure class="reveal" data-draft>
-          <div class="aspect-[4/5] bg-champagne/70 border border-taupe/40 flex items-center justify-center text-sm text-espresso-soft">Bild folgt</div>
-          <figcaption class="mt-3"><span class="font-display text-lg">Frisur 4</span><span class="block text-sm text-espresso-soft">Kurze Beschreibung folgt</span></figcaption>
-        </figure>
-        <figure class="reveal" data-draft>
-          <div class="aspect-[4/5] bg-champagne/70 border border-taupe/40 flex items-center justify-center text-sm text-espresso-soft">Bild folgt</div>
-          <figcaption class="mt-3"><span class="font-display text-lg">Frisur 5</span><span class="block text-sm text-espresso-soft">Kurze Beschreibung folgt</span></figcaption>
-        </figure>
-        <figure class="reveal" data-draft>
-          <div class="aspect-[4/5] bg-champagne/70 border border-taupe/40 flex items-center justify-center text-sm text-espresso-soft">Bild folgt</div>
-          <figcaption class="mt-3"><span class="font-display text-lg">Frisur 6</span><span class="block text-sm text-espresso-soft">Kurze Beschreibung folgt</span></figcaption>
-        </figure>
-        <figure class="reveal" data-draft>
-          <div class="aspect-[4/5] bg-champagne/70 border border-taupe/40 flex items-center justify-center text-sm text-espresso-soft">Bild folgt</div>
-          <figcaption class="mt-3"><span class="font-display text-lg">Frisur 7</span><span class="block text-sm text-espresso-soft">Kurze Beschreibung folgt</span></figcaption>
-        </figure>
-        <figure class="reveal" data-draft>
-          <div class="aspect-[4/5] bg-champagne/70 border border-taupe/40 flex items-center justify-center text-sm text-espresso-soft">Bild folgt</div>
-          <figcaption class="mt-3"><span class="font-display text-lg">Frisur 8</span><span class="block text-sm text-espresso-soft">Kurze Beschreibung folgt</span></figcaption>
-        </figure>
+      <div class="reveal">
+        <span class="eyebrow">Frisur 1</span>
+        <h2 id="frisur-1-titel" class="font-display text-3xl md:text-4xl mt-3">Name der Frisur 1</h2>
+      </div>
+      <div class="mt-8 md:mt-10 grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+        <figure class="reveal col-span-2 md:col-span-1"><div class="aspect-[4/5] bg-champagne/70 border border-taupe/40 flex items-center justify-center text-sm text-espresso-soft">Titelbild folgt</div></figure>
+        <figure class="reveal"><div class="aspect-[4/5] bg-champagne/70 border border-taupe/40 flex items-center justify-center text-sm text-espresso-soft">Beispielbild folgt</div></figure>
+        <figure class="reveal"><div class="aspect-[4/5] bg-champagne/70 border border-taupe/40 flex items-center justify-center text-sm text-espresso-soft">Beispielbild folgt</div></figure>
+      </div>
+    </div>
+  </section>
+  <section id="frisur-2" class="border-t border-taupe/50 bg-ivory scroll-mt-24" aria-labelledby="frisur-2-titel" data-draft>
+    <div class="max-w-content mx-auto px-6 md:px-10 py-16 md:py-24">
+      <div class="reveal">
+        <span class="eyebrow">Frisur 2</span>
+        <h2 id="frisur-2-titel" class="font-display text-3xl md:text-4xl mt-3">Name der Frisur 2</h2>
+      </div>
+      <div class="mt-8 md:mt-10 grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+        <figure class="reveal col-span-2 md:col-span-1"><div class="aspect-[4/5] bg-champagne/70 border border-taupe/40 flex items-center justify-center text-sm text-espresso-soft">Titelbild folgt</div></figure>
+        <figure class="reveal"><div class="aspect-[4/5] bg-champagne/70 border border-taupe/40 flex items-center justify-center text-sm text-espresso-soft">Beispielbild folgt</div></figure>
+        <figure class="reveal"><div class="aspect-[4/5] bg-champagne/70 border border-taupe/40 flex items-center justify-center text-sm text-espresso-soft">Beispielbild folgt</div></figure>
+      </div>
+    </div>
+  </section>
+  <section id="frisur-3" class="border-t border-taupe/50 bg-champagne/50 scroll-mt-24" aria-labelledby="frisur-3-titel" data-draft>
+    <div class="max-w-content mx-auto px-6 md:px-10 py-16 md:py-24">
+      <div class="reveal">
+        <span class="eyebrow">Frisur 3</span>
+        <h2 id="frisur-3-titel" class="font-display text-3xl md:text-4xl mt-3">Name der Frisur 3</h2>
+      </div>
+      <div class="mt-8 md:mt-10 grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+        <figure class="reveal col-span-2 md:col-span-1"><div class="aspect-[4/5] bg-champagne/70 border border-taupe/40 flex items-center justify-center text-sm text-espresso-soft">Titelbild folgt</div></figure>
+        <figure class="reveal"><div class="aspect-[4/5] bg-champagne/70 border border-taupe/40 flex items-center justify-center text-sm text-espresso-soft">Beispielbild folgt</div></figure>
+        <figure class="reveal"><div class="aspect-[4/5] bg-champagne/70 border border-taupe/40 flex items-center justify-center text-sm text-espresso-soft">Beispielbild folgt</div></figure>
+      </div>
+    </div>
+  </section>
+  <section id="frisur-4" class="border-t border-taupe/50 bg-ivory scroll-mt-24" aria-labelledby="frisur-4-titel" data-draft>
+    <div class="max-w-content mx-auto px-6 md:px-10 py-16 md:py-24">
+      <div class="reveal">
+        <span class="eyebrow">Frisur 4</span>
+        <h2 id="frisur-4-titel" class="font-display text-3xl md:text-4xl mt-3">Name der Frisur 4</h2>
+      </div>
+      <div class="mt-8 md:mt-10 grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+        <figure class="reveal col-span-2 md:col-span-1"><div class="aspect-[4/5] bg-champagne/70 border border-taupe/40 flex items-center justify-center text-sm text-espresso-soft">Titelbild folgt</div></figure>
+        <figure class="reveal"><div class="aspect-[4/5] bg-champagne/70 border border-taupe/40 flex items-center justify-center text-sm text-espresso-soft">Beispielbild folgt</div></figure>
+        <figure class="reveal"><div class="aspect-[4/5] bg-champagne/70 border border-taupe/40 flex items-center justify-center text-sm text-espresso-soft">Beispielbild folgt</div></figure>
       </div>
     </div>
   </section>
