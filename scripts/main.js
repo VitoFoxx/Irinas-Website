@@ -193,6 +193,22 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  /* Satin banner: gentle parallax */
+  const parallaxEls = document.querySelectorAll('[data-parallax]');
+  if (parallaxEls.length && !reduceMotion) {
+    let ticking = false;
+    const update = () => {
+      parallaxEls.forEach((el) => {
+        const r = el.parentElement.getBoundingClientRect();
+        if (r.bottom < 0 || r.top > window.innerHeight) return;
+        el.style.transform = 'translate3d(0,' + (r.top * -0.2).toFixed(1) + 'px,0)';
+      });
+      ticking = false;
+    };
+    window.addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+    update();
+  }
+
   /* Scroll reveal — native IntersectionObserver, no external library.
      Hero convergence animation lives entirely in CSS (see main.css). */
   const revealEls = document.querySelectorAll('.reveal');
