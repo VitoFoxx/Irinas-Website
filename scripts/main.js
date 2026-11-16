@@ -157,6 +157,42 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  /* Brautstyling-Anfrage (Netlify Forms, AJAX with graceful fallback) */
+  const anfrageForm = document.querySelector('[data-anfrage-form]');
+  if (anfrageForm) {
+    const status = anfrageForm.querySelector('[data-form-status]');
+    const thanks = '<div class="border border-taupe/50 bg-champagne/30 p-8 md:p-10"><span class="eyebrow">Anfrage gesendet</span><h2 class="font-display text-2xl md:text-3xl mt-3">Vielen Dank für deine Anfrage!</h2><p class="mt-4 text-espresso-soft leading-relaxed">Ich prüfe deine Angaben persönlich und melde mich so bald wie möglich bei dir, um Verfügbarkeit, Wünsche und die nächsten Schritte zu besprechen.</p></div>';
+    if (new URLSearchParams(window.location.search).get('gesendet') === '1') {
+      anfrageForm.outerHTML = thanks;
+    } else {
+      anfrageForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const data = new FormData(anfrageForm);
+        const merged = new Map();
+        data.forEach((value, key) => {
+          merged.set(key, merged.has(key) ? merged.get(key) + ', ' + value : value);
+        });
+        const body = new URLSearchParams();
+        merged.forEach((value, key) => body.append(key, value));
+        const btn = anfrageForm.querySelector('button[type="submit"]');
+        btn.disabled = true;
+        status.classList.add('hidden');
+        fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: body.toString() })
+          .then((res) => {
+            if (!res.ok) throw new Error(res.status);
+            anfrageForm.outerHTML = thanks;
+            window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+          })
+          .catch(() => {
+            btn.disabled = false;
+            status.textContent = 'Die Anfrage konnte gerade nicht gesendet werden. Bitte versuche es später noch einmal oder schreib mir per WhatsApp.';
+            status.classList.remove('hidden');
+            status.classList.add('text-espresso');
+          });
+      });
+    }
+  }
+
   /* Scroll reveal — native IntersectionObserver, no external library.
      Hero convergence animation lives entirely in CSS (see main.css). */
   const revealEls = document.querySelectorAll('.reveal');
