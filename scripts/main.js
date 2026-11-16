@@ -209,6 +209,22 @@ document.addEventListener('DOMContentLoaded', () => {
     update();
   }
 
+  /* Before/after slider */
+  document.querySelectorAll('[data-ba]').forEach((el) => {
+    const setP = (v) => { v = Math.max(0, Math.min(100, v)); el.style.setProperty('--p', v + '%'); el.setAttribute('aria-valuenow', Math.round(v)); };
+    const fromX = (x) => { const r = el.getBoundingClientRect(); setP((x - r.left) / r.width * 100); };
+    let down = false;
+    el.addEventListener('pointerdown', (e) => { down = true; el.setPointerCapture(e.pointerId); fromX(e.clientX); });
+    el.addEventListener('pointermove', (e) => { if (down) fromX(e.clientX); });
+    el.addEventListener('pointerup', () => { down = false; });
+    el.addEventListener('pointercancel', () => { down = false; });
+    el.addEventListener('keydown', (e) => {
+      const cur = parseFloat(el.getAttribute('aria-valuenow')) || 50;
+      if (e.key === 'ArrowLeft') { setP(cur - 5); e.preventDefault(); }
+      if (e.key === 'ArrowRight') { setP(cur + 5); e.preventDefault(); }
+    });
+  });
+
   /* Scroll reveal — native IntersectionObserver, no external library.
      Hero convergence animation lives entirely in CSS (see main.css). */
   const revealEls = document.querySelectorAll('.reveal');
